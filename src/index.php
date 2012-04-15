@@ -11,7 +11,7 @@ $types = Array( "album", "artist", "track" );
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<!--[if lte IE 7]><script src="js/IE8.js" type="text/javascript"></script><![endif]-->
-		<script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"></script>
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
 		<script src="js/lfmr.js" type="text/javascript"></script>
 	</head>
 	<body id="home">
@@ -44,7 +44,6 @@ $types = Array( "album", "artist", "track" );
 					<li><a href="#type=album&search=Black&replace=Ginger">Album - Black &rsaquo; Ginger</a></li>
 					<li><a href="#type=artist&search=Richard&replace=Dick">Artist - Richard &rsaquo; Dick</a></li>
 					<li><a href="#type=track&search=Love&replace=Muff">Track - Love &rsaquo; Muff</a></li>
-					<li><a href="#type=track&search=Rap&replace=Rape">Track - Rap &rsaquo; Rape</a></li>
 					<li><a href="#type=track&search=You&replace=Lue">Track - You &rsaquo; Lue</a></li>
 					<li><a href="#type=track&search=Help&replace=Herp%20Derp">Track - Help &rsaquo; Herp Derp</a></li>
 				</ul>
