@@ -1,0 +1,110 @@
+/* Imports */
+@import url("reset.css");
+@import url("960.css");
+
+/***** Global *****/
+
+/* clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/* Body */
+body {
+	background: #b40200;
+	color: #666666;
+	font-size: 62.5%; /* Base font size: 10px */
+	font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	padding: 0;
+	text-align: center;
+}
+
+/* Headings */
+h1 { font-size: 4em;}
+h2 { font-size: 3.2em; } /* 20px */
+h3 { font-size: 1.6em; } /* 20px */
+h4 { font-size: 1.2em; } /* 20px */
+
+h1, h2, h3, h4, h5, h6, legend {
+	font-weight: bold;
+	line-height: 2;
+}
+
+a {
+	text-decoration: none;
+	color: #b40200;
+}
+
+p {
+	font-size: 1em;
+	line-height: 2;
+}
+
+section p {
+	font-size: 1.6em;
+}
+
+li.result a {
+	color: white;
+}
+
+div#container {
+	margin: 0 auto;
+	width: 600px;
+	padding: 16px;
+	text-align: left;
+	background-color: white;
+}
+
+section#results ul li.result {
+	background-repeat: no-repeat;
+	/* background-position: 20px 20px; */
+	float: left;
+	width: 126px;
+	height: 126px;
+	background-color: #333;
+	background-position: 50% 50%;
+	border: 1px solid black; 
+	margin: 0 16px 16px 0;
+}
+
+section#results li#more, section#results li#loading {
+	width: 100%;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+section#results ul li.result span {
+	display: block;
+	background-color: #333;
+	color: #fff;
+	margin: 8px;
+	padding: 4px;
+	line-height: 1.6;
+	font-size: 1em;
+	font-weight: bold;
+	opacity:0.8;
+	filter:alpha(opacity=80)
+}
+
+aside#examples ul li {
+	font-size: 1.2em;
+	margin: 0 0 4px 0;
+}
