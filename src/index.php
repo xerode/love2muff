@@ -9,10 +9,8 @@ $types = Array( "album", "artist", "track" );
 		<title>Love2Muff</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
-		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-		<!--[if lte IE 7]><script src="js/IE8.js" type="text/javascript"></script><![endif]-->
-		<script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
 		<script src="js/lfmr.js" type="text/javascript"></script>
+		<!-- <script data-main="js/main" src="js/libs/require/require.js"></script> -->
 	</head>
 	<body id="home">
 		<div id="container">
