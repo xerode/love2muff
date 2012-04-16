@@ -9,7 +9,7 @@ define(
 				this.message = "This is a Class demo";
 			},
 			demo: function(){
-				alert( this.message );
+				return this.message;
 			}
 		} );
 

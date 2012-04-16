@@ -12,13 +12,11 @@ define(
 				function() {
 					var p = document.createElement( "p" );
 
-					$( p ).text( "jQuery loaded and working as expected" );
-
-					$( 'body' ).append( p );
-
 					var prole = new Person();
 
-					prole.demo();
+					$( p ).text( prole.demo() );
+
+					$( 'section' ).append( p );
 
 				}
 			);

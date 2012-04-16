@@ -7,8 +7,7 @@ require.config( {
 
 require(
 	[
-		'app',
-  		'order!libs/jquery/jquery-1.7.2.min'
+		'app'
   	],
   	function( App ) {
 		
