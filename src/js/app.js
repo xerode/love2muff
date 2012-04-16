@@ -1,8 +1,10 @@
 define(
 	[
-		'jQuery'
+		'jQuery',
+		'Class',
+		'classdemo'
 	],
-	function( $ ) {
+	function( $, Class, Person ) {
 
 		var initialise = function() {
 			// Pass in our Router module and call it's initialize function
@@ -14,8 +16,13 @@ define(
 
 					$( 'body' ).append( p );
 
+					var prole = new Person();
+
+					prole.demo();
+
 				}
 			);
+
 		}
 
 		return {

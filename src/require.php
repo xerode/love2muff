@@ -14,7 +14,7 @@ $types = Array( "album", "artist", "track" );
 	<body id="home">
 		<div id="container">
 			<header id="banner">
-				<h1>#lovetomuff</h1>
+				<h1>#love2muff</h1>
 			</header>
 			<section>
 				<p>Stuff</p>

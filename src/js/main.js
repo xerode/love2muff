@@ -1,6 +1,7 @@
 require.config( {
 	paths: {
-		jQuery: 'libs/jquery/jquery'
+		jQuery: 'libs/jquery/jquery',
+		Class: 'libs/class/jrc-wrapper'
 	}
 } );
 
