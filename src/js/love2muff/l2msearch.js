@@ -27,18 +27,23 @@ define(
 					url: "getxml.php",
 					data: qs,
 					dataType: "xml",
-					success: this.parseXML
+					success: this.onXMLLoaded
 				} );
 
 			},
 
-			parseXML:function( xml ) {
-				alert( "parseXML" );
+			onXMLLoaded: function( xml ) {
+				alert( xml.toString() );
+
+				this.results = xml;
+
+				// dispatch event
+				// model should be listening, receives event and then parses XML
 			}
 
 		} );
 
 		return L2MSearch;
-		
+
 	}
 );
