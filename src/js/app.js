@@ -1,12 +1,15 @@
 define(
 	[
 		'jQuery',
-		'classdemo'
+		'classdemo',
+		'love2muff/l2mmodel'
 	],
-	function( $, Person ) {
+	function( $, Person, L2MModel ) {
 
 		var initialise = function() {
-			// Pass in our Router module and call it's initialize function
+
+			var model = new L2MModel();
+
 			$( document ).ready( 
 				function() {
 					var p = document.createElement( "p" );
