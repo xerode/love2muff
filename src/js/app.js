@@ -1,10 +1,9 @@
 define(
 	[
 		'jQuery',
-		'Class',
 		'classdemo'
 	],
-	function( $, Class, Person ) {
+	function( $, Person ) {
 
 		var initialise = function() {
 			// Pass in our Router module and call it's initialize function

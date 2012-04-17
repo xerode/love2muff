@@ -3,11 +3,11 @@
         appDir: "../",
         baseUrl: "js",
         dir: "../../bin",
-        optimize: "none"
+        optimize: "none",
 
         paths: {
-            "jquery": "require-jquery"
-            //"backgammon-main": "backgammon/main"
+            jQuery: 'libs/jquery/jquery',
+            Class: 'libs/class/jrc-wrapper'
         },
 
         modules: [
