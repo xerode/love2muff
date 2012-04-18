@@ -10,6 +10,12 @@ define(
 
 				this.model = m;
 				
+			},
+
+			test: function() {
+
+				this.model.controllerTest();
+
 			}
 			
 		} );

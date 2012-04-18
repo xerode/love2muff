@@ -10,10 +10,11 @@ define(
 
 		var initialise = function() {
 
-			var model = new L2MModel();
-			var controller = new L2MController( model );
-			var view = new L2MView( model, controller );
+			this.model = new L2MModel();
+			this.controller = new L2MController( this.model );
+			this.view = new L2MView( this.model, this.controller );
 
+			/*
 			$( document ).ready( 
 				function() {
 					var p = document.createElement( "p" );
@@ -26,6 +27,7 @@ define(
 
 				}
 			);
+			*/
 
 		}
 

@@ -1,10 +1,11 @@
 define(
 	[
-		'Class'
+		'Class',
+		'jQuery'
 	],
-	function( Class ) {
+	function( Class, $ ) {
 		
-		var L2MController = Class.extend( {
+		var L2MView = Class.extend( {
 
 			init: function( m, c ) {
 
@@ -12,12 +13,27 @@ define(
 				this.controller = c;
 
 				this.form = {};
+
+				// Used to get around jQuery's scoping
+				var jthis = this;
+
+				$( document ).ready( function() {
+
+					$( "a#ct" ).click( function( e ) {
+
+						e.preventDefault();
+
+						jthis.controller.test();
+
+					} );
+
+				} );
 				
 			}
 			
 		} );
 
-		return L2MController;
+		return L2MView;
 
 	}
 );

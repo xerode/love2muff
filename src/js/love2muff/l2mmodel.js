@@ -13,6 +13,12 @@ define(
 
 				this.search.execute();
 				
+			},
+
+			controllerTest: function() {
+
+				alert( "Controller test!" );
+
 			}
 			
 		} );

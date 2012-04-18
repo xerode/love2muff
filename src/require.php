@@ -28,6 +28,7 @@ $types = Array( "album", "artist", "track" );
 			</nav>
 			<section>
 				<p>Stuff</p>
+				<p><a href="#" id="ct">Controller test</a></p>
 			</section>
 			<footer>
 				<p>Developed by <a href="http://xerode.net/">xerode</a> using PHP, JavaScript (jQuery, RequireJS, John Resig's JavaScript inheritance) and the <a href="">last.fm API</a></p>
