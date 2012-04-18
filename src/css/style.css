@@ -1,30 +1,6 @@
 /* Imports */
-@import url("yui_reset_3.4.1.css");
-@import url("960.css");
-
-/***** Global *****/
-
-/* clearfix */
-.clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
- 
-.clearfix {
-	display: inline-block;
-}
- 
-html[xmlns] .clearfix {
-	display: block;
-}
- 
-* html .clearfix {
-	height: 1%;
-}
+@import url( "yui_reset_3.4.1.css" );
+@import url( "clearfix.css" );
 
 /* Body */
 body {

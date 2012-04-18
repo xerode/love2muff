@@ -33,7 +33,6 @@ define(
 			},
 
 			onXMLLoaded: function( xml ) {
-				alert( xml.toString() );
 
 				this.results = xml;
 

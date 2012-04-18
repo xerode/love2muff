@@ -10,6 +10,8 @@ define(
 
 				this.model = m;
 				this.controller = c;
+
+				this.form = {};
 				
 			}
 			
