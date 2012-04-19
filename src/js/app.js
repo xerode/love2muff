@@ -12,22 +12,7 @@ define(
 
 			this.model = new L2MModel();
 			this.controller = new L2MController( this.model );
-			this.view = new L2MView( this.model, this.controller );
-
-			/*
-			$( document ).ready( 
-				function() {
-					var p = document.createElement( "p" );
-
-					var prole = new Person();
-
-					$( p ).text( prole.demo() );
-
-					$( 'section' ).append( p );
-
-				}
-			);
-			*/
+			this.view = new L2MView( this.model, this.controller, $( "div#mainView" ) );
 
 		}
 

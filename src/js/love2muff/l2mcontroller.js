@@ -16,6 +16,12 @@ define(
 
 				this.model.controllerTest();
 
+			},
+
+			setSearch: function( type, search, replace ) {
+
+				this.model.search( type, search, replace );
+
 			}
 			
 		} );

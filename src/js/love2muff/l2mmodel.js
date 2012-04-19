@@ -8,11 +8,16 @@ define(
 		var L2MModel = Class.extend( {
 
 			init: function() {
-
-				this.search = new L2MSearch( "song", "love", "muff", 0 );
-
-				this.search.execute();
 				
+			},
+
+			search: function( type, searchFor, replaceWith ) {
+
+				this.query = new L2MSearch( type, searchFor, replaceWith, 0 );
+
+				// bind listener
+				this.query.execute();
+
 			},
 
 			controllerTest: function() {

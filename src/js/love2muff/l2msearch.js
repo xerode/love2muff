@@ -26,7 +26,7 @@ define(
 					type: "GET",
 					url: "getxml.php",
 					data: qs,
-					dataType: "xml",
+					dataType: "text",
 					success: this.onXMLLoaded
 				} );
 
@@ -35,6 +35,8 @@ define(
 			onXMLLoaded: function( xml ) {
 
 				this.results = xml;
+
+				alert( xml );
 
 				// dispatch event
 				// model should be listening, receives event and then parses XML
