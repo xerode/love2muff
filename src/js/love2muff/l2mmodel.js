@@ -13,6 +13,9 @@ define(
 
 			search: function( type, searchFor, replaceWith ) {
 
+				// clear view results
+				// show loading spinner in view
+
 				this.query = new L2MSearch( type, searchFor, replaceWith, 0 );
 
 				// bind listener
@@ -20,9 +23,20 @@ define(
 
 			},
 
-			controllerTest: function() {
+			getMoreSearchResults: function() {
 
-				alert( "Controller test!" );
+				// show loading spinner in view
+				this.query.page += 1;
+
+				// bind listener
+				this.query.execute();
+
+			},
+
+			onQueryComplete: function() {
+
+				// unbind listener
+				// parse results and send them to view
 
 			}
 			

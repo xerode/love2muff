@@ -22,6 +22,12 @@ define(
 
 				this.model.search( type, search, replace );
 
+			},
+
+			getMoreSearchResults: function() {
+
+				this.model.getMoreSearchResults();
+
 			}
 			
 		} );

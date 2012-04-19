@@ -36,8 +36,28 @@ define(
 
 					} );
 
+					$( "a#more" ).click( function( e ) {
+
+						e.preventDefault();
+
+						jthis.controller.getMoreSearchResults();
+
+					} );
+
 				} );
 				
+			},
+
+			showMore: function() {
+
+				$( "a#more" ).show();
+
+			},
+
+			hideMore: function() {
+
+				$( "a#more" ).hide();
+
 			}
 			
 		} );

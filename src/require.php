@@ -36,7 +36,9 @@ $types = Array( "album", "artist", "track" );
 							<li><a href="#">Coverflow</a></li>
 						</ul>
 					</nav>
-					<p><a href="#" id="ct">Controller test</a></p>
+					<div id="results">
+						<p><a href="#" id="more">More!</a></p>
+					</div>
 				</section>
 				<footer>
 					<p>Developed by <a href="http://xerode.net/">xerode</a> using PHP, JavaScript (jQuery, RequireJS, John Resig's JavaScript inheritance) and the <a href="">last.fm API</a></p>
