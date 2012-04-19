@@ -2,8 +2,9 @@ define(
 	[
 		'Class',
 		'jQuery',
+		'Events'
 	],
-	function( Class, $ ) {
+	function( Class, $, Events ) {
 		
 		var L2MSearch = Class.extend( {
 
@@ -16,18 +17,23 @@ define(
 				this.numPages = 0;
 				this.results = {};
 
+				this.events = new Events();
+
 			},
 
 			execute: function() {
 
 				var qs = "type=" + escape( this.type ) + "&search=" + escape( this.search ) + "&replace=" + escape( this.replace ) + "&page=" + escape( this.page );
 
+				var jthis = this;
+
 				$.ajax( {
 					type: "GET",
 					url: "getxml.php",
 					data: qs,
 					dataType: "text",
-					success: this.onXMLLoaded
+					success: jthis.onXMLLoaded,
+					context: jthis
 				} );
 
 			},
@@ -36,10 +42,10 @@ define(
 
 				this.results = xml;
 
-				alert( xml );
-
 				// dispatch event
 				// model should be listening, receives event and then parses XML
+				this.events.trigger( "load_complete" );
+
 			}
 
 		} );

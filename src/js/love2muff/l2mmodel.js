@@ -19,6 +19,7 @@ define(
 				this.query = new L2MSearch( type, searchFor, replaceWith, 0 );
 
 				// bind listener
+				this.query.events.on( "load_complete", this.onQueryComplete, this )
 				this.query.execute();
 
 			},
@@ -36,7 +37,11 @@ define(
 			onQueryComplete: function() {
 
 				// unbind listener
+				this.query.events.off( "load_complete", this.onQueryComplete, this );
+
 				// parse results and send them to view
+
+				alert( "Received by model" );
 
 			}
 			
