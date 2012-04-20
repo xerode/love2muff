@@ -1,14 +1,21 @@
 define(
 	[
 		'Class',
+		'Events',
 		'love2muff/l2msearch'
 	],
-	function( Class, L2MSearch ) {
+	function( Class, Events, L2MSearch ) {
 		
 		var L2MModel = Class.extend( {
 
 			init: function() {
 				
+				this.events = new Events();
+
+			},
+
+			initialise: function() {
+				this.events.trigger( "init" );
 			},
 
 			search: function( type, searchFor, replaceWith ) {
@@ -19,7 +26,7 @@ define(
 				this.query = new L2MSearch( type, searchFor, replaceWith, 0 );
 
 				// bind listener
-				this.query.events.on( "load_complete", this.onQueryComplete, this )
+				this.query.events.on( "load_complete", this.onQueryComplete, this );
 				this.query.execute();
 
 			},
@@ -30,6 +37,7 @@ define(
 				this.query.page += 1;
 
 				// bind listener
+				this.query.events.on( "load_complete", this.onMoreResultsComplete, this );
 				this.query.execute();
 
 			},
@@ -41,7 +49,14 @@ define(
 
 				// parse results and send them to view
 
-				alert( "Received by model" );
+			},
+
+			onMoreResultsComplete: function() {
+
+				// unbind listener
+				this.query.events.off( "load_complete", this.onMoreResultsComplete, this );
+
+				// parse results and send them to view
 
 			}
 			

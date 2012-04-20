@@ -10,6 +10,7 @@ define(
 			init: function( m, c, s ) {
 
 				this.model = m;
+				this.model.events.on( "init", this.onModelInit, this );
 				this.controller = c;
 				this.stage = s;
 
@@ -17,16 +18,12 @@ define(
 
 				// Used to get around jQuery's scoping
 				var jthis = this;
+				
+			},
+
+			initialise: function() {
 
 				$( document ).ready( function() {
-
-					$( "a#ct" ).click( function( e ) {
-
-						e.preventDefault();
-
-						jthis.controller.test();
-
-					} );
 
 					$( "form" ).submit( function( e ) { 
 
@@ -45,7 +42,13 @@ define(
 					} );
 
 				} );
-				
+
+			},
+
+			clearResults: function() {
+
+				$( "ul#results" ).empty();
+
 			},
 
 			showMore: function() {
@@ -57,6 +60,26 @@ define(
 			hideMore: function() {
 
 				$( "a#more" ).hide();
+
+			},
+
+			showLoading: function() {
+
+				$( "a#loading" ).show();
+
+			},
+
+			hideLoading: function() {
+
+				$( "a#loading" ).hide();
+
+			},
+
+			onModelInit: function() {
+
+				this.model.events.off( "init", this.onModelInit, this );
+
+				this.initialise();
 
 			}
 			

@@ -21,7 +21,8 @@ $types = Array( "album", "artist", "track" );
 					<h1>#love2muff</h1>
 				</header>
 				<section>
-					<form id="app">
+					<h2>Search</h2>
+					<form id="searchForm">
 						<label for="type">Search</label>
 						<select name="type" id="type">
 						<?php foreach( $types as $val ) { print( "<option>".$val."</option>" ); } ?>
@@ -29,14 +30,19 @@ $types = Array( "album", "artist", "track" );
 						names <label for="search">for</label> <input name="search" id="search" type="text" value="Love" /> and <label for="replace">replace with</label> <input name="replace" id="replace" type="text" value="Muff" />
 						<button id="go" type="submit">Go!</button>
 					</form>
+				</section>
+				<section>
+					<h2>Results</h2>
 					<nav>
 						<ul id="views">
-							<li><a href="#">Thumbnails</a></li>
-							<li><a href="#">List</a></li>
-							<li><a href="#">Coverflow</a></li>
+							<li><a href="#" id="thumbnails">Thumbnails</a></li>
+							<li><a href="#" id="lists">List</a></li>
+							<!--<li><a href="#">Coverflow</a></li>-->
 						</ul>
 					</nav>
-					<div id="results">
+					<div>
+						<ul id="results" class="thumbnails">
+						</ul>
 						<p><a href="#" id="more">More!</a></p>
 					</div>
 				</section>

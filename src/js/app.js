@@ -14,6 +14,8 @@ define(
 			this.controller = new L2MController( this.model );
 			this.view = new L2MView( this.model, this.controller, $( "div#mainView" ) );
 
+			this.model.initialise();
+
 		}
 
 		return {
