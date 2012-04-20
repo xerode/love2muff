@@ -15,13 +15,13 @@ define(
 				this.stage = s;
 
 				this.form = {};
-
-				// Used to get around jQuery's scoping
-				var jthis = this;
 				
 			},
 
 			initialise: function() {
+
+				// Used to get around jQuery's scoping
+				var jthis = this;
 
 				$( document ).ready( function() {
 
