@@ -17,9 +17,13 @@ define(
 
 			parse: function( xml, type, search, replace ) {
 
-				var jthis, result, insert;
+				console.log( "replace? " + replace );
+
+				var jthis, result, insert, regex;
 
 				jthis = this;
+
+				regex = new RegExp( search, "gi" );
 
 				$( xml ).find( type ).each( function() {
 
@@ -39,14 +43,15 @@ define(
 							break;
 					
 					}
-					
-					// console.log( "Result == " + insert );
+
+					insert = insert.replace( regex, replace );
 
 					result.text = insert;
 					result.image = {
 						sd: $( this ).find( "image[size=large]" ).text(),
 						hd: $( this ).find( "image[size=extralarge]" ).text()
 					};
+					result.url = $( this ).find( "url" ).text();
 
 					jthis.results[ jthis.results.length ] = result;
 					

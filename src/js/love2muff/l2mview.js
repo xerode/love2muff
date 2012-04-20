@@ -29,7 +29,7 @@ define(
 
 						e.preventDefault();
 
-						jthis.controller.setSearch( $( "select#type" ).val(), $( "input#search" ).val(), $( "input#research" ).val() );
+						jthis.controller.setSearch( $( "select#type" ).val(), $( "input#search" ).val(), $( "input#replace" ).val() );
 
 					} );
 
