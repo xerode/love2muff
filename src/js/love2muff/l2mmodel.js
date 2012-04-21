@@ -15,13 +15,25 @@ define(
 			},
 
 			initialise: function() {
-				this.events.trigger( "init" );
+				this.notify( "init" );
+			},
+
+			notify: function( s ) {
+
+				if( s == "" ) {
+					s = "update";
+				}
+
+				this.events.trigger( s );
+
 			},
 
 			search: function( type, searchFor, replaceWith ) {
 
 				// clear view results
 				// show loading spinner in view
+				this.notify( "clear" );
+				this.notify( "loading" );
 
 				this.query = new L2MSearch( type, searchFor, replaceWith, 0 );
 
@@ -34,6 +46,8 @@ define(
 			getMoreSearchResults: function() {
 
 				// show loading spinner in view
+				this.notify( "loading" );
+
 				this.query.page += 1;
 
 				// bind listener
@@ -48,6 +62,7 @@ define(
 				this.query.events.off( "load_complete", this.onQueryComplete, this );
 
 				// parse results and send them to view
+				this.notify( "results" );
 
 			},
 
@@ -57,6 +72,7 @@ define(
 				this.query.events.off( "load_complete", this.onMoreResultsComplete, this );
 
 				// parse results and send them to view
+				this.notify( "more_results" );
 
 			}
 			

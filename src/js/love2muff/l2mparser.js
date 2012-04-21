@@ -17,8 +17,6 @@ define(
 
 			parse: function( xml, type, search, replace ) {
 
-				console.log( "replace? " + replace );
-
 				var jthis, result, insert, regex;
 
 				jthis = this;

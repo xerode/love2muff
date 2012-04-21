@@ -43,7 +43,8 @@ $types = Array( "album", "artist", "track" );
 					<div>
 						<ul id="results" class="thumbnails">
 						</ul>
-						<p><a href="#" id="more">More!</a></p>
+						<p id="loading">Loading!</p>
+						<p id="more"><a href="#">More!</a></p>
 					</div>
 				</section>
 				<footer>

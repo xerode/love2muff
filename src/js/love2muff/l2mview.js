@@ -20,12 +20,17 @@ define(
 
 			initialise: function() {
 
+				this.model.events.on( "clear", this.onModelClear, this );
+				this.model.events.on( "loading", this.onModelLoading, this );
+				this.model.events.on( "results", this.onModelResults, this );
+				this.model.events.on( "more_results", this.onModelMoreResults, this );
+
 				// Used to get around jQuery's scoping
 				var jthis = this;
 
 				$( document ).ready( function() {
 
-					$( "form" ).submit( function( e ) { 
+					$( "form#searchForm" ).submit( function( e ) { 
 
 						e.preventDefault();
 
@@ -33,7 +38,7 @@ define(
 
 					} );
 
-					$( "a#more" ).click( function( e ) {
+					$( "p#more a" ).click( function( e ) {
 
 						e.preventDefault();
 
@@ -53,25 +58,31 @@ define(
 
 			showMore: function() {
 
-				$( "a#more" ).show();
+				$( "p#more" ).show();
 
 			},
 
 			hideMore: function() {
 
-				$( "a#more" ).hide();
+				$( "p#more" ).hide();
 
 			},
 
 			showLoading: function() {
 
-				$( "a#loading" ).show();
+				$( "p#loading" ).show();
 
 			},
 
 			hideLoading: function() {
 
-				$( "a#loading" ).hide();
+				$( "p#loading" ).hide();
+
+			},
+
+			onModelClear: function() {
+
+				this.clearResults();
 
 			},
 
@@ -79,7 +90,33 @@ define(
 
 				this.model.events.off( "init", this.onModelInit, this );
 
+				this.hideLoading();
+				this.hideMore();
+
 				this.initialise();
+
+			},
+
+			onModelLoading: function() {
+
+				this.showLoading();
+				this.hideMore();
+
+			},
+
+			onModelResults: function() {
+
+				console.log( "results" );
+
+				this.hideLoading();
+				this.showMore();
+
+			},
+
+			onModelMoreResults: function() {
+
+				this.hideLoading();
+				this.showMore();
 
 			}
 			

@@ -15,7 +15,6 @@ define(
 				this.search = s;
 				this.replace = r;
 				this.page = p;
-				this.numPages = 0;
 				this.results = {};
 
 				this.events = new Events();
