@@ -15,7 +15,7 @@ define(
 				this.search = s;
 				this.replace = r;
 				this.page = p;
-				this.results = {};
+				this.results = [];
 
 				this.events = new Events();
 
@@ -41,8 +41,8 @@ define(
 			onXMLLoaded: function( xml ) {
 
 				this.parser = new L2MParser();
-				this.parser.parse( xml, this.type, this.search, this.replace );
 				this.parser.events.on( "parse_complete", this.onParseComplete, this );
+				this.parser.parse( xml, this.type, this.search, this.replace );
 
 				// dispatch event
 				// model should be listening, receives event and then parses XML

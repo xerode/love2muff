@@ -106,8 +106,6 @@ define(
 
 			onModelResults: function() {
 
-				console.log( "results" );
-
 				this.hideLoading();
 				this.showMore();
 

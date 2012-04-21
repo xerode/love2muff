@@ -9,8 +9,11 @@ define(
 		var L2MModel = Class.extend( {
 
 			init: function() {
+
+				this.name = "fff";
 				
 				this.events = new Events();
+				this.results = [];
 
 			},
 
@@ -38,7 +41,7 @@ define(
 				this.query = new L2MSearch( type, searchFor, replaceWith, 0 );
 
 				// bind listener
-				this.query.events.on( "load_complete", this.onQueryComplete, this );
+				this.query.events.on( "results", this.onQueryComplete, this );
 				this.query.execute();
 
 			},
@@ -51,7 +54,7 @@ define(
 				this.query.page += 1;
 
 				// bind listener
-				this.query.events.on( "load_complete", this.onMoreResultsComplete, this );
+				this.query.events.on( "results", this.onMoreResultsComplete, this );
 				this.query.execute();
 
 			},
@@ -59,7 +62,9 @@ define(
 			onQueryComplete: function() {
 
 				// unbind listener
-				this.query.events.off( "load_complete", this.onQueryComplete, this );
+				this.query.events.off( "results", this.onQueryComplete, this );
+
+				this.results = this.query.results;
 
 				// parse results and send them to view
 				this.notify( "results" );
@@ -69,7 +74,9 @@ define(
 			onMoreResultsComplete: function() {
 
 				// unbind listener
-				this.query.events.off( "load_complete", this.onMoreResultsComplete, this );
+				this.query.events.off( "results", this.onMoreResultsComplete, this );
+
+				this.results = this.query.results.concat( this.results );
 
 				// parse results and send them to view
 				this.notify( "more_results" );
