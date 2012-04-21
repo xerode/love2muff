@@ -1,3 +1,3 @@
 rm -r bin
 node r.js -o src/js/app.build.js
-open http://xero.de/love2muff/require.php
+open http://xero.de/love2muff/

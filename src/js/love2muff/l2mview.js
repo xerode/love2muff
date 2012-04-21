@@ -50,6 +50,23 @@ define(
 
 			},
 
+			createResults: function( res ) {
+
+				var i, li;
+
+				i = res.length;
+
+				while( i-- ) {
+
+					li = document.createElement( 'li' );
+					$( li ).text( res[ i ].text );
+
+					$( "ul#results" ).append( li );
+
+				}
+
+			},
+
 			clearResults: function() {
 
 				$( "ul#results" ).empty();
@@ -106,7 +123,11 @@ define(
 
 			onModelResults: function() {
 
+				var res;
+
 				this.hideLoading();
+
+				this.createResults( this.model.query.results );
 				this.showMore();
 
 			},
@@ -114,6 +135,7 @@ define(
 			onModelMoreResults: function() {
 
 				this.hideLoading();
+				this.createResults( this.model.query.results );
 				this.showMore();
 
 			}
