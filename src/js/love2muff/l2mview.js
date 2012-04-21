@@ -52,15 +52,18 @@ define(
 
 			createResults: function( res ) {
 
-				var i, li;
+				var a, i, li;
 
 				i = res.length;
 
 				while( i-- ) {
 
 					li = document.createElement( 'li' );
-					$( li ).text( res[ i ].text );
+					a = document.createElement( 'a' );
+					$( a ).text( res[ i ].text );
+					$( a ).attr( 'href', res[ i ].url );
 
+					$( li ).append( a );
 					$( "ul#results" ).append( li );
 
 				}
