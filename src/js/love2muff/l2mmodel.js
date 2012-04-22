@@ -38,7 +38,7 @@ define(
 				this.notify( "clear" );
 				this.notify( "loading" );
 
-				this.query = new L2MSearch( type, searchFor, replaceWith, 0 );
+				this.query = new L2MSearch( type, searchFor, replaceWith, 1 );
 
 				// bind listener
 				this.query.events.on( "results", this.onQueryComplete, this );

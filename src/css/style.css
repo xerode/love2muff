@@ -49,16 +49,44 @@ div#container {
 	background-color: white;
 }
 
-section#results ul li.result {
-	background-repeat: no-repeat;
+ul#results li {
+	overflow: hidden;
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+
+ul.thumbnails li {
 	/* background-position: 20px 20px; */
+	display: inline;
 	float: left;
 	width: 126px;
 	height: 126px;
 	background-color: #333;
 	background-position: 50% 50%;
 	border: 1px solid black; 
-	margin: 0 16px 16px 0;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+ul.thumbnails li span {
+	display: block;
+	background-color: #999;
+	text-align: center;
+	width: 120px;
+	height: auto;
+}
+
+ul.list li {
+	display: block;
+	background-color: transparent;
+	background-position: -400px -400px;
+	float: none;
+	width: auto;
+	height: auto;
+	border: none; 
+	margin: 0;
+	font-size: 1.4em;
+	font-weight: bold;
 }
 
 section#results li#more, section#results li#loading {
@@ -83,8 +111,4 @@ section#results ul li.result span {
 aside#examples ul li {
 	font-size: 1.2em;
 	margin: 0 0 4px 0;
-}
-
-p#more {
-	
 }

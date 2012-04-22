@@ -58,7 +58,7 @@ define(
 
 						e.preventDefault();
 
-						$( "ul#results" ).removeClass().addClass( 'thumbnails' );
+						$( "ul#results" ).removeClass().addClass( 'thumbnails' ).addClass( 'clearfix' );
 
 					} );
 
@@ -77,6 +77,12 @@ define(
 					span = document.createElement( 'span' );
 					$( a ).text( res[ i ].text );
 					$( a ).attr( 'href', res[ i ].url );
+					$( li ).css( 'background-image', 'url(' + this.model.results[ i ].image.sd + ')' );
+					$( li ).click( function() {
+
+						window.location = $( this ).find( 'a' ).attr( 'href' );
+
+					} );
 
 					$( span ).append( a );
 					$( li ).append( span );
