@@ -45,7 +45,17 @@ $types = Array( "album", "artist", "track" );
 					<p id="loading">Loading!</p>
 					<p id="more"><a href="#">More!</a></p>
 				</section>
+				<section id="sExamples">
+					<h2>Examples</h2>
+					<ul id="examples">
+						<li>Tracks - Love &rsaquo; Muff</li>
+						<li>Albums - Black &rsaquo; Ginger</li>
+						<li>Artists - Sex &rsaquo; Sax</li>
+						<li>Tracks - Help &rsaquo; Herp Derp</li>
+					</ul>
+				</section>
 				<footer>
+					<h3>About</h3>
 					<p>Developed by <a href="http://xerode.net/">xerode</a> using PHP, JavaScript (jQuery, RequireJS, John Resig's JavaScript inheritance) and the <a href="">last.fm API</a></p>
 					<p><a href="http://xerode.net/">Please post any comments, suggestions or criticisms on this blog post</a></p>
 				</footer>

@@ -53,6 +53,7 @@ ul#results li {
 	overflow: hidden;
 	background-repeat:no-repeat;
 	cursor: pointer;
+	font-weight: bold;
 }
 
 ul.thumbnails li {
@@ -64,27 +65,26 @@ ul.thumbnails li {
 	background-color: #333;
 	background-position: 50% 50%;
 	border: 1px solid black; 
-	font-size: 1em;
-	font-weight: normal;
+	font-size: 1.2em;
 }
 
 ul.thumbnails li span {
 	display: block;
-	background-color: #999;
+	background-color: #000;
 	text-align: center;
-	width: 120px;
+	width: 126px;
 	height: auto;
 }
 
-ul.thumbnails li span a {
+ul.thumbnails li a {
 	display: block;
-	padding: 4px;
+	padding: 8px;
 }
 
 ul.list li {
 	display: block;
 	background-color: transparent;
-	background-position: -400px -400px;
+	background-position: -1000px 1000px;
 	float: none;
 	width: auto;
 	height: auto;
@@ -110,4 +110,8 @@ section#results ul li.result span {
 aside#examples ul li {
 	font-size: 1.2em;
 	margin: 0 0 4px 0;
+}
+
+section#sResults {
+	display: none;
 }
