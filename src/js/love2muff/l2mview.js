@@ -66,6 +66,18 @@ define(
 
 			},
 
+			showResults: function() {
+
+				$( "section#sResults" ).show();
+
+			},
+
+			hideResults: function() {
+
+				$( "section#sResults" ).hide();
+
+			},
+
 			createResults: function( res ) {
 
 				var a, i, li, span;
@@ -80,7 +92,9 @@ define(
 					$( li ).css( 'background-image', 'url(' + this.model.results[ i ].image.sd + ')' );
 					$( li ).click( function() {
 
-						window.location = $( this ).find( 'a' ).attr( 'href' );
+						window.location.href = $( this ).find( 'a' ).attr( 'href' );
+
+						return false;
 
 					} );
 
@@ -132,6 +146,7 @@ define(
 
 				this.model.events.off( "init", this.onModelInit, this );
 
+				this.hideResults();
 				this.hideLoading();
 				this.hideMore();
 
@@ -150,6 +165,7 @@ define(
 
 				this.hideLoading();
 				this.createResults( this.model.query.results );
+				this.showResults();
 				this.showMore();
 
 			},

@@ -20,7 +20,7 @@ $types = Array( "album", "artist", "track" );
 				<header id="banner">
 					<h1>#love2muff</h1>
 				</header>
-				<section>
+				<section id="sSearch">
 					<h2>Search</h2>
 					<form id="searchForm">
 						<label for="type">Search</label>
@@ -31,7 +31,8 @@ $types = Array( "album", "artist", "track" );
 						<button id="go" type="submit">Go!</button>
 					</form>
 				</section>
-				<section>
+				<section id="sResults">
+					<h2>Results</h2>
 					<nav>
 						<ul id="views">
 							<li><a href="#" id="setThumbnails">Thumbnails</a></li>
@@ -39,13 +40,10 @@ $types = Array( "album", "artist", "track" );
 							<!--<li><a href="#">Coverflow</a></li>-->
 						</ul>
 					</nav>
-					<h2>Results</h2>
-					<div>
-						<ul id="results" class="list">
-						</ul>
-						<p id="loading">Loading!</p>
-						<p id="more"><a href="#">More!</a></p>
-					</div>
+					<ul id="results" class="list">
+					</ul>
+					<p id="loading">Loading!</p>
+					<p id="more"><a href="#">More!</a></p>
 				</section>
 				<footer>
 					<p>Developed by <a href="http://xerode.net/">xerode</a> using PHP, JavaScript (jQuery, RequireJS, John Resig's JavaScript inheritance) and the <a href="">last.fm API</a></p>

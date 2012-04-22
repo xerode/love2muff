@@ -76,6 +76,11 @@ ul.thumbnails li span {
 	height: auto;
 }
 
+ul.thumbnails li span a {
+	display: block;
+	padding: 4px;
+}
+
 ul.list li {
 	display: block;
 	background-color: transparent;
@@ -86,12 +91,6 @@ ul.list li {
 	border: none; 
 	margin: 0;
 	font-size: 1.4em;
-	font-weight: bold;
-}
-
-section#results li#more, section#results li#loading {
-	width: 100%;
-	font-size: 2em;
 	font-weight: bold;
 }
 
