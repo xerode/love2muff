@@ -46,24 +46,40 @@ define(
 
 					} );
 
+					$( "a#setList" ).click( function( e ) {
+
+						e.preventDefault();
+
+						$( "ul#results" ).removeClass().addClass( 'list' );
+
+					} );
+
+					$( "a#setThumbnails" ).click( function( e ) {
+
+						e.preventDefault();
+
+						$( "ul#results" ).removeClass().addClass( 'thumbnails' );
+
+					} );
+
 				} );
 
 			},
 
 			createResults: function( res ) {
 
-				var a, i, li;
+				var a, i, li, span;
 
-				i = res.length;
-
-				while( i-- ) {
+				for( i = 0; i < res.length; i++ ) {
 
 					li = document.createElement( 'li' );
 					a = document.createElement( 'a' );
+					span = document.createElement( 'span' );
 					$( a ).text( res[ i ].text );
 					$( a ).attr( 'href', res[ i ].url );
 
-					$( li ).append( a );
+					$( span ).append( a );
+					$( li ).append( span );
 					$( "ul#results" ).append( li );
 
 				}
@@ -126,10 +142,7 @@ define(
 
 			onModelResults: function() {
 
-				var res;
-
 				this.hideLoading();
-
 				this.createResults( this.model.query.results );
 				this.showMore();
 

@@ -32,16 +32,16 @@ $types = Array( "album", "artist", "track" );
 					</form>
 				</section>
 				<section>
-					<h2>Results</h2>
 					<nav>
 						<ul id="views">
-							<li><a href="#" id="thumbnails">Thumbnails</a></li>
-							<li><a href="#" id="lists">List</a></li>
+							<li><a href="#" id="setThumbnails">Thumbnails</a></li>
+							<li><a href="#" id="setList">List</a></li>
 							<!--<li><a href="#">Coverflow</a></li>-->
 						</ul>
 					</nav>
+					<h2>Results</h2>
 					<div>
-						<ul id="results" class="thumbnails">
+						<ul id="results" class="list">
 						</ul>
 						<p id="loading">Loading!</p>
 						<p id="more"><a href="#">More!</a></p>
