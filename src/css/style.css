@@ -111,9 +111,14 @@ ul.list li {
 	width: auto;
 	height: auto;
 	border: none; 
-	margin: 0;
-	font-size: 1.4em;
+	padding: 0.8em 0 0.8em 0;
+	font-size: 1.6em;
 	font-weight: bold;
+	border-bottom: dotted #ccc 2px;
+}
+
+ul.list li:last-child {
+	border-bottom: none;
 }
 
 aside#examples ul li {

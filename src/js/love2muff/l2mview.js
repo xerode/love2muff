@@ -100,7 +100,9 @@ define(
 					$( a ).text( res[ i ].text );
 					$( a ).attr( 'href', res[ i ].url );
 					$( a ).attr( 'title', 'View this entry on last.fm' );
-					$( li ).css( 'background-image', 'url(' + this.model.results[ i ].image.sd + ')' );
+					if( this.model.results[ i ].image.sd != "" ) {
+						$( li ).css( 'background-image', 'url(' + this.model.results[ i ].image.sd + ')' );
+					}
 
 					/*
 					$( li ).click( function() {
