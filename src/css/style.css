@@ -134,3 +134,24 @@ p#loading, p#more {
 	font-weight: bold;
 	font-size: 2em;
 }
+
+ul#examples li {
+	margin: 0 0 0.4em 0;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+p {
+	text-align: justify;
+	line-height: 1.5;
+}
+
+footer {
+	border-top: dotted #ccc 2px;
+	margin: 1em 0 0 0;
+}
+
+footer p {
+	margin: 0 0 1.2em 0;
+	font-size: 1.2em;
+}

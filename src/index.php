@@ -35,9 +35,10 @@ $types = Array( "album", "artist", "track" );
 					<h2>Results</h2>
 					<nav>
 						<ul id="views" class="clearfix">
+							<li>View as:</li>
 							<li><a href="#" id="setThumbnails">Thumbnails</a></li>
 							<li><a href="#" id="setList">List</a></li>
-							<!--<li><a href="#">Coverflow</a></li>-->
+							<li><a href="#" id="setFlow">Coverflow</a></li>
 						</ul>
 					</nav>
 					<ul id="results" class="thumbnails clearfix">
