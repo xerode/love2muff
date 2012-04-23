@@ -62,6 +62,16 @@ define(
 
 					} );
 
+					$( "ul#examples li a" ).click( function( e ) {
+
+						e.preventDefault();
+
+						window.location.hash = $( this ).attr( "href" );
+		
+						window.location.reload();
+
+					} );
+
 				} );
 
 			},

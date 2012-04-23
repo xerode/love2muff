@@ -44,8 +44,6 @@ define(
 				this.parser.events.on( "parse_complete", this.onParseComplete, this );
 				this.parser.parse( xml, this.type, this.search, this.replace );
 
-				// dispatch event
-				// model should be listening, receives event and then parses XML
 				this.events.trigger( "load_complete" );
 
 			},

@@ -74,7 +74,7 @@ define(
 					url = url.substr( 0, index );
 				}
 	
-				var curURL = url + "#type=" + type + "&search=" + searchFor + "&replace=" + replaceWith;
+				var curURL = url + "#type=" + escape( type ) + "&search=" + escape( searchFor ) + "&replace=" + escape( replaceWith );
 	
 				window.location.replace( curURL );
 

@@ -48,10 +48,10 @@ $types = Array( "album", "artist", "track" );
 				<section id="sExamples">
 					<h2>Examples</h2>
 					<ul id="examples">
-						<li>Tracks - Love &rsaquo; Muff</li>
-						<li>Albums - Black &rsaquo; Ginger</li>
-						<li>Artists - Sex &rsaquo; Sax</li>
-						<li>Tracks - Help &rsaquo; Herp Derp</li>
+						<li><a href="#type=track&amp;search=Love&amp;replace=Muff">Tracks - Love &rsaquo; Muff</a></li>
+						<li><a href="#type=track&amp;search=Black&amp;replace=Ginger">Albums - Black &rsaquo; Ginger</a></li>
+						<li><a href="#type=artist&amp;search=Sex&amp;replace=Sax">Artists - Sex &rsaquo; Sax</a></li>
+						<li><a href="#type=track&amp;search=Help&amp;replace=Herp%20Derp">Tracks - Help &rsaquo; Herp Derp</a></li>
 					</ul>
 				</section>
 				<footer>
