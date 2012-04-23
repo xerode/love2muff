@@ -110,7 +110,10 @@ define(
 
 					$( span ).append( a );
 					$( li ).append( span );
+					$( li ).hide();
 					$( "ul#results" ).append( li );
+
+					$( li ).delay( i * 100 ).fadeIn( 500 );
 
 				}
 
