@@ -56,7 +56,6 @@ ul#results {
 ul#results li {
 	overflow: hidden;
 	background-repeat:no-repeat;
-	cursor: pointer;
 	font-weight: bold;
 	position: relative;
 }
