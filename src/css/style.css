@@ -58,6 +58,7 @@ ul#results li {
 	background-repeat:no-repeat;
 	cursor: pointer;
 	font-weight: bold;
+	position: relative;
 }
 
 ul.thumbnails li {
@@ -90,6 +91,8 @@ ul.thumbnails li span {
 	text-align: center;
 	width: 126px;
 	height: auto;
+	position: absolute;
+	bottom: 0;
 }
 
 ul.thumbnails li a {
