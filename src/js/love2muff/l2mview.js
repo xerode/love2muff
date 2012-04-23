@@ -58,7 +58,7 @@ define(
 
 						e.preventDefault();
 
-						$( "ul#results" ).removeClass().addClass( 'thumbnails' ).addClass( 'clearfix' );
+						$( "ul#results" ).removeClass().addClass( 'thumbnails clearfix' );
 
 					} );
 
@@ -155,7 +155,7 @@ define(
 			},
 
 			onModelLoading: function() {
-
+				this.showResults();
 				this.showLoading();
 				this.hideMore();
 
@@ -165,7 +165,6 @@ define(
 
 				this.hideLoading();
 				this.createResults( this.model.query.results );
-				this.showResults();
 				this.showMore();
 
 			},

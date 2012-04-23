@@ -49,6 +49,10 @@ div#container {
 	background-color: white;
 }
 
+ul#results {
+	width: 100%;
+}
+
 ul#results li {
 	overflow: hidden;
 	background-repeat:no-repeat;

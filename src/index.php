@@ -40,7 +40,7 @@ $types = Array( "album", "artist", "track" );
 							<!--<li><a href="#">Coverflow</a></li>-->
 						</ul>
 					</nav>
-					<ul id="results" class="list">
+					<ul id="results" class="thumbnails clearfix">
 					</ul>
 					<p id="loading">Loading!</p>
 					<p id="more"><a href="#">More!</a></p>
