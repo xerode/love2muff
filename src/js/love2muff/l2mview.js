@@ -100,6 +100,8 @@ define(
 					$( a ).text( res[ i ].text );
 					$( a ).attr( 'href', res[ i ].url );
 					$( li ).css( 'background-image', 'url(' + this.model.results[ i ].image.sd + ')' );
+
+					/*
 					$( li ).click( function() {
 
 						window.location.href = $( this ).find( 'a' ).attr( 'href' );
@@ -107,6 +109,7 @@ define(
 						return false;
 
 					} );
+					*/
 
 					$( span ).append( a );
 					$( li ).append( span );
