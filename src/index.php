@@ -57,7 +57,7 @@ $types = Array( "album", "artist", "track" );
 				</section>
 				<footer>
 					<h3>About</h3>
-					<p>Developed by <a href="http://xerode.net/">xerode</a> using PHP, JavaScript (jQuery, RequireJS, John Resig's JavaScript inheritance) and the <a href="">last.fm API</a></p>
+					<p>Developed by <a href="http://xerode.net/">xerode</a> using PHP, JavaScript (<a href="http://jquery.com/">jQuery</a>, <a href="http://requirejs.org/">RequireJS</a>, <a href="http://ejohn.org/blog/simple-javascript-inheritance/">John Resig's simple JavaScript inheritance</a>) and the <a href="http://www.last.fm/api">last.fm API</a></p>
 					<p><a href="http://xerode.net/">Please post any comments, suggestions or criticisms on this blog post</a></p>
 				</footer>
 			</div>
