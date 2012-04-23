@@ -44,6 +44,18 @@ define(
 				this.query.events.on( "results", this.onQueryComplete, this );
 				this.query.execute();
 
+				// Change URL
+
+				var url = new String( window.location );
+				var index = url.indexOf( "#" );
+				if( index != -1 ) {
+					url = url.substr( 0, index );
+				}
+	
+				var curURL = url + "#type=" + type + "&search=" + searchFor + "&replace=" + replaceWith;
+	
+				window.location.replace( curURL );
+
 			},
 
 			getMoreSearchResults: function() {
