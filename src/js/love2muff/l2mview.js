@@ -167,6 +167,10 @@ define(
 				this.createResults( this.model.query.results );
 				this.showMore();
 
+				$( "select#type" ).val( this.model.query.type );
+				$( "input#search" ).val( this.model.query.search );
+				$( "input#replace" ).val( this.model.query.replace );
+
 			},
 
 			onModelMoreResults: function() {

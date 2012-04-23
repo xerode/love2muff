@@ -18,7 +18,29 @@ define(
 			},
 
 			initialise: function() {
+
 				this.notify( "init" );
+
+				var url = new String( window.location );
+	
+				if( url.indexOf( "#" ) > -1 ) {
+					
+					var hash = url.split( "#" );
+					
+					if( hash.length > 0 ) {
+						
+						var qs = new String( hash[ 1 ] );
+						
+						var tmpo = {};
+						
+						qs.replace( new RegExp("([^?=&]+)(=([^&]*))?", "g"), function( $0, $1, $2, $3 ) { tmpo[$1] = unescape( $3); } );
+						
+						this.search( tmpo[ "type" ], tmpo[ "search" ], tmpo[ "replace" ] );
+						
+					}
+
+				}
+
 			},
 
 			notify: function( s ) {
