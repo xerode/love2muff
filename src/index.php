@@ -34,7 +34,7 @@ $types = Array( "album", "artist", "track" );
 				<section id="sResults">
 					<h2>Results</h2>
 					<nav>
-						<ul id="views">
+						<ul id="views" class="clearfix">
 							<li><a href="#" id="setThumbnails">Thumbnails</a></li>
 							<li><a href="#" id="setList">List</a></li>
 							<!--<li><a href="#">Coverflow</a></li>-->
