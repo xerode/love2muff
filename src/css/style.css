@@ -92,10 +92,10 @@ ul.thumbnails li span {
 	position: absolute;
 	bottom: 0;
 
-	filter: alpha(opacity=90); /* internet explorer */
-	-khtml-opacity: 0.9;      /* khtml, old safari */
-	-moz-opacity: 0.9;       /* mozilla, netscape */
-	opacity: 0.9;           /* fx, safari, opera */
+	filter: alpha(opacity=85); /* internet explorer */
+	-khtml-opacity: 0.85;      /* khtml, old safari */
+	-moz-opacity: 0.85;       /* mozilla, netscape */
+	opacity: 0.85;           /* fx, safari, opera */
 }
 
 ul.thumbnails li a {
