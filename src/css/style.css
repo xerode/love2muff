@@ -82,9 +82,11 @@ ul.thumbnails li {
 	box-shadow: 2px 2px 2px 2px #999;
 }
 
+/*
 ul.thumbnails li:nth-child(4n+4) {
 	margin: 0 0 16px 0;
 }
+*/
 
 ul.thumbnails li span {
 	display: block;
@@ -157,4 +159,20 @@ footer {
 footer p {
 	margin: 0 0 1.2em 0;
 	font-size: 1.2em;
+}
+
+body.iportrait div#container {
+	width: 300px;
+}
+
+body.ilandscape div#container {
+	width: 400px;
+}
+
+body.medium div#container {
+	width: 960px;
+}
+
+body.massive div#container {
+	width: 1400px;
 }
