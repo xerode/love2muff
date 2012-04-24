@@ -30,6 +30,14 @@ define(
 
 				$( document ).ready( function() {
 
+					jthis.resize();
+
+					$( window ).resize( function() {
+						
+						jthis.resize();
+
+					} );
+
 					$( "form#searchForm" ).submit( function( e ) { 
 
 						e.preventDefault();
@@ -81,6 +89,26 @@ define(
 					} );
 
 				} );
+
+			},
+
+			resize: function() {
+
+				var w = $( window ).width();
+
+				if( w < 640 ) {
+
+					$( 'body' ).removeClass().addClass( 'micro' );
+
+				} else if( w < 800 ) {
+
+					$( 'body' ).removeClass().addClass( 'medium' );
+
+				} else if( w > 1024 ) {
+
+					$( 'body' ).removeClass().addClass( 'massive' );
+
+				}
 
 			},
 
@@ -194,7 +222,7 @@ define(
 				this.createResults( this.model.query.results );
 				this.showMore();
 
-				$( "select#type" ).val( this.model.query.type );
+				$( "select#type option#o" + this.model.query.type ).attr( "selected", "selected" );
 				$( "input#search" ).val( this.model.query.search );
 				$( "input#replace" ).val( this.model.query.replace );
 

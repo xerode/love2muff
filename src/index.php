@@ -25,7 +25,7 @@ $types = Array( "album", "artist", "track" );
 					<form id="searchForm">
 						<label for="type">Search</label>
 						<select name="type" id="type">
-						<?php foreach( $types as $val ) { print( "<option>".$val."</option>" ); } ?>
+						<?php foreach( $types as $val ) { print( "<option id=\"o".$val."\">".$val."</option>" ); } ?>
 						</select>
 						names <label for="search">for</label> <input name="search" id="search" type="text" value="Love" /> and <label for="replace">replace with</label> <input name="replace" id="replace" type="text" value="Muff" />
 						<button id="go" type="submit">Go!</button>
