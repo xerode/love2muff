@@ -62,6 +62,14 @@ define(
 
 					} );
 
+					$( "a#setFlow" ).click( function( e ) {
+
+						e.preventDefault();
+
+						$( "ul#results" ).removeClass().addClass( 'flow' );
+
+					} );
+
 					$( "ul#examples li a" ).click( function( e ) {
 
 						e.preventDefault();
