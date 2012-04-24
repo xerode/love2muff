@@ -96,17 +96,25 @@ define(
 
 				var w = $( window ).width();
 
-				if( w < 640 ) {
+				if( w <= 320 ) {
 
-					$( 'body' ).removeClass().addClass( 'micro' );
+					$( 'body' ).removeClass().addClass( 'iportrait' );
 
-				} else if( w < 800 ) {
+				} else if( w <= 480 ) {
+
+					$( 'body' ).removeClass().addClass( 'ilandscape' );
+
+				} else if( w <= 1024 ) {
 
 					$( 'body' ).removeClass().addClass( 'medium' );
 
-				} else if( w > 1024 ) {
+					// 850px
+
+				} else {
 
 					$( 'body' ).removeClass().addClass( 'massive' );
+
+					// 1400px
 
 				}
 
