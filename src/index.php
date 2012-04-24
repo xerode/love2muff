@@ -35,7 +35,7 @@ $types = Array( "album", "artist", "track" );
 					<h2>Results</h2>
 					<nav>
 						<ul id="views" class="clearfix">
-							<li>View as:</li>
+							<li>View as</li>
 							<li><a href="#" id="setThumbnails">Thumbnails</a></li>
 							<li><a href="#" id="setList">List</a></li>
 							<li><a href="#" id="setFlow">Coverflow</a></li>
@@ -52,6 +52,7 @@ $types = Array( "album", "artist", "track" );
 						<li><a href="#type=track&amp;search=Love&amp;replace=Muff">Tracks - Love &rsaquo; Muff</a></li>
 						<li><a href="#type=track&amp;search=Black&amp;replace=Ginger">Albums - Black &rsaquo; Ginger</a></li>
 						<li><a href="#type=artist&amp;search=Sex&amp;replace=Sax">Artists - Sex &rsaquo; Sax</a></li>
+						<li><a href="#type=track&amp;search=Funk&amp;replace=Fuck">Tracks - Funk &rsaquo; Fuck</a></li>
 						<li><a href="#type=track&amp;search=Help&amp;replace=Herp%20Derp">Tracks - Help &rsaquo; Herp Derp</a></li>
 					</ul>
 				</section>

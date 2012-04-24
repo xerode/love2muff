@@ -83,8 +83,8 @@ define(
 						e.preventDefault();
 
 						window.location.hash = $( this ).attr( "href" );
-		
-						window.location.reload();
+
+						jthis.controller.setExample( window.location.hash );
 
 					} );
 
@@ -117,6 +117,10 @@ define(
 					// 1400px
 
 				}
+
+				var n = Math.floor( w / 144 ) * 144 + 32;
+
+				$( 'div#container' ).width( n );
 
 			},
 

@@ -93,6 +93,26 @@ define(
 
 			},
 
+			example: function( s ) {
+
+				var qs = s.substr( 1 );
+
+				var pairs = qs.split( '&' );
+
+				var vars = [];
+
+				for( var i = 0; i < pairs.length; i++ ) {
+
+					var pair = pairs[ i ].split( '=' );
+
+					vars[ pair[ 0 ] ] = unescape( pair[ 1 ] );
+
+				}
+
+				this.search( vars[ 'type' ], vars[ 'search' ], vars[ 'replace' ] );
+
+			},
+
 			onQueryComplete: function() {
 
 				// unbind listener

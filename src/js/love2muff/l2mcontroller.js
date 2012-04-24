@@ -28,6 +28,12 @@ define(
 
 				this.model.getMoreSearchResults();
 
+			},
+
+			setExample: function( s ) {
+
+				this.model.example( s );
+
 			}
 			
 		} );

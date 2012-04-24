@@ -19,19 +19,19 @@ if( isset( $_REQUEST[ "type" ] ) && isset( $_REQUEST[ "search" ] ) ) {
 	switch( strtolower( $_REQUEST[ "type" ] ) ) {
 
 		case "album":
-			$ch = curl_init( "http://ws.audioscrobbler.com/2.0/?method=album.search&album=".$s."&api_key=".$key."&page=".$page."&limit=16" );
+			$ch = curl_init( "http://ws.audioscrobbler.com/2.0/?method=album.search&album=".$s."&api_key=".$key."&page=".$page."&limit=20" );
 			break;
 
 		case "artist":
-			$ch = curl_init( "http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=".$s."&api_key=".$key."&page=".$page."&limit=16" );
+			$ch = curl_init( "http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=".$s."&api_key=".$key."&page=".$page."&limit=20" );
 			break;
 
 		case "track":
-			$ch = curl_init( "http://ws.audioscrobbler.com/2.0/?method=track.search&track=".$s."&api_key=".$key."&page=".$page."&limit=16" );
+			$ch = curl_init( "http://ws.audioscrobbler.com/2.0/?method=track.search&track=".$s."&api_key=".$key."&page=".$page."&limit=20" );
 			break;
 
 		default:
-			$ch = curl_init( "http://ws.audioscrobbler.com/2.0/?method=track.search&track=Love&api_key=".$key."&page=".$page."&limit=16" );
+			$ch = curl_init( "http://ws.audioscrobbler.com/2.0/?method=track.search&track=Love&api_key=".$key."&page=".$page."&limit=20" );
 
 	}
 	
